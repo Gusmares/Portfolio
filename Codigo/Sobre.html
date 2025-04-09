@@ -13,35 +13,50 @@
                 <img src="https://www.seekpng.com/png/detail/81-814496_penguin-chat-penguin-chat-3-dance.png" alt="icon">
                 <h1>Gusmares</h1>
             </div>
+            
             <nav class="main-nav">
                 <a href="#">Sobre</a>
                 <a href="#">Projetos</a>
                 <a href="#">Historia</a>
-                <a href="#">Contato</a>
+                
             </nav>
+            <nav class="gitbtn">
+                <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
+                <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">Meu Likedin</a>
+            </nav>
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Alternar tema">
+                    <span class="light-icon">☀️</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+            </div>
             <div class="status">
                 <h3>Em Produção...</h3>
             </div>
         </header>
 
         <main class="content">
-            <article class="intro">
-                <div class="container">
-                    <div class="inicio">
-                        <h1>Olá! Meu nome é Gustavo e este é o meu portfólio.</h1>
+            <section class="inc">
+                <article class="intro">
+                    <div class="animated-bg"></div>
+                        <div class="container">
+                            <div class="inicio">
+                                <h1>Olá! Meu nome é Gustavo e este é o meu portfólio.</h1>
+                            </div>
+                        </div>
+                </article>
+            </section>
+            <section class="Sobre">
+                <article id="about" class="about-section">
+                    <div class="about-container">
+                        <h2 class="section-title">Sobre Mim</h2>
+                        <div class="about-content">
+                            <p class="about-text">Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> com foco em desenvolvimento web e cybersecurity. Minha jornada tecnológica combina <strong>código e criatividade</strong> - antes de mergulhar no mundo da programação, trabalhei como designer gráfico dominando o <strong>pacote Adobe</strong> (Photoshop, Illustrator, After Effects).</p>
+                            <p class="about-text">Sou movido pela curiosidade de entender como as coisas funcionam nos mínimos detalhes - desde a camada de aplicação até os protocolos de rede. Meu lema é: <strong>"Aprender, implementar, evoluir"</strong>.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article class="about">
-                <div class="apresentacao">
-                    <h2>Sobre Mim</h2>
-                    <div class="text-content">
-                        <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e estou aprendendo a criar páginas web. Aqui você pode conferir meus projetos e habilidades.</p>
-                        <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
-                    </div>
-                </div>
-            </article>
+                </article>
+            </section>
 
             <article class="skills">
                 <h2>Habilidades</h2>
@@ -55,5 +70,29 @@
             </article>
         </main>
     </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        const currentTheme = localStorage.getItem('theme') || 
+                            (prefersDarkScheme.matches ? 'dark' : 'light');
+        
+        if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
 </body>
+
+</script>
 </html>
