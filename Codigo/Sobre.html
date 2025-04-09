@@ -4,55 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-        }
-        h1, h2, {
-            margin: 10px 0;
-        }
-        h1, h3 {
-            margin: 5px 0;
-        }
-        p {
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="page-container">
+        <header class="sidebar">
+            <div class="profile">
+                <img src="https://www.seekpng.com/png/detail/81-814496_penguin-chat-penguin-chat-3-dance.png" alt="icon">
+                <h1>Gusmares</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#">Sobre</a>
+                <a href="#">Projetos</a>
+                <a href="#">Historia</a>
+                <a href="#">Contato</a>
+            </nav>
+            <div class="status">
+                <h3>Em Produção...</h3>
+            </div>
+        </header>
 
-    <header>
-        <h1>Meu Portfólio</h1>
-        <h3>Em Produção...</h3>
-    </header>
+        <main class="content">
+            <article class="intro">
+                <div class="container">
+                    <div class="inicio">
+                        <h1>Olá! Meu nome é Gustavo e este é o meu portfólio.</h1>
+                    </div>
+                </div>
+            </article>
 
-    <div class="container">
-        <img src="C:\Users\aluno\Desktop\Gustavão\pythonProject\Portifolio\Fotos\images.jfif" alt="Minha Foto">
-        <h2>Gusmares</h2>
-        <p>Olá! Meu nome é Gustavo e este é o meu portfólio. Sou estudante de <strong> Analise de Desenvolvimento de Sistema </strong> e estou aprendendo a criar páginas web.</p>
-        <p>Aqui você pode adicionar mais informações sobre você, seus projetos, habilidades, etc.</p>
-        <a href="https://github.com/Gusmares" target="_blank" rel="noopener noreferrer">Meu Github</a>
-        </div>
+            <article class="about">
+                <div class="apresentacao">
+                    <h2>Sobre Mim</h2>
+                    <div class="text-content">
+                        <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e estou aprendendo a criar páginas web. Aqui você pode conferir meus projetos e habilidades.</p>
+                        <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
+                    </div>
+                </div>
+            </article>
 
+            <article class="skills">
+                <h2>Habilidades</h2>
+                <div class="cards-container">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </article>
+        </main>
+    </div>
 </body>
 </html>
