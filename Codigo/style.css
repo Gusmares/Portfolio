@@ -6,8 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     min-height: 100vh;
 }
 
@@ -17,8 +17,8 @@ body {
 }
 
 .sidebar {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     width: 300px;
     padding: 30px 20px;
     display: flex;
@@ -88,6 +88,12 @@ body {
     animation: aparecer 0.8s ease forwards;
 }
 
+.about-content {
+    margin: 15px;
+    font-size: 20px;
+
+}
+
 .about {
     margin: 30px 0;
     max-width: 800px;
@@ -96,7 +102,7 @@ body {
 .about h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .about p {
@@ -121,6 +127,22 @@ body {
     background-color: #b53a7a;
     transform: translateY(-3px);
 }
+.gitbtn a:hover {
+    background-color: #b53a7a;
+    transform: translateY(-3px);
+}
+
+.gitbtn a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #d14b8f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
 
 .skills {
     margin-top: 50px;
@@ -129,7 +151,7 @@ body {
 .skills h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .cards-container {
@@ -142,7 +164,7 @@ body {
 .card {
     width: 150px;
     height: 150px;
-    background: #d14b8f;
+    background: var(--accent-color);
     border-radius: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -161,7 +183,7 @@ body {
 @keyframes aparecer {
     0% {
         filter: blur(5px);
-        opacity: 0.5;
+        opacity: 0.9;
         transform: scale(0.95);
     }
     100% {
@@ -198,3 +220,86 @@ body {
         transform: translateY(3px);
     }
 }
+
+.intro {
+    overflow: hidden;
+    padding: 80px 0;
+    margin-bottom: 450px;
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 740px;
+    background: linear-gradient(45deg, #d14b8f, #ab57ff, #4b6cd1, #4bd1a5);
+    background-size: 300% 300%;
+    animation: gradientBG 5s ease infinite;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.intro .inicio h1 {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 3.5rem;
+}
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg: #333;
+    --header-text: #fff;
+    --accent-color: #d14b8f;
+    --card-bg: #fff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1a1a1a;
+    --header-text: #f0f0f0;
+    --accent-color: #ab57ff;
+    --card-bg: #1e1e1e;
+}
+
+.theme-switcher {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#theme-toggle {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.dark-icon { display: none; }
+[data-theme="dark"] .dark-icon { display: inline; }
+[data-theme="dark"] .light-icon { display: none; }
