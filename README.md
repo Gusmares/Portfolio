@@ -59,7 +59,6 @@ gusmares/ ├── index.html ├── css/ │ └── style.css ├── 
 - [x] Cards com animações leves e foco visual
 - [x] Apresentação profissional e estratégica
 - [ ] Área de projetos integrável com GitHub API
-- [ ] Versão com React + Tailwind + Framer Motion (em planejamento)
 
 ---
 
