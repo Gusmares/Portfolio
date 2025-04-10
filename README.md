@@ -1,7 +1,6 @@
 # 🧠 Gusmares — Portfólio Pessoal
 
-**Gusmares** é o portfólio profissional de Sirius Salvatore. Um projeto minimalista e estratégico que reúne identidade, projetos, habilidades e visão — com base nos princípios de um *Grey Hat*: inteligência, domínio técnico e um senso de justiça implacável.
-
+**Gusmares** é o portfólio profissional de Gusmares. Um projeto minimalista e estratégico que reúne identidade, projetos, habilidades.
 ---
 
 ## 🚀 Propósito
@@ -20,7 +19,6 @@
 | **CSS3**  | Estilização, temas claro/escuro |
 | **JavaScript** | Interações, animações, lógica |
 | **Git** + GitHub | Versionamento e deploy |
-| (Futuramente) | React / Tailwind / ShadCN / Framer Motion |
 
 ---
 
