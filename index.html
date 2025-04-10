@@ -13,27 +13,29 @@
   <div class="page-container">
     <header class="sidebar">
       <div class="profile">
-        <img src="https://www.seekpng.com/png/detail/81-814496_penguin-chat-penguin-chat-3-dance.png" alt="icon" />
+        <img src="Fotos/icon.jpg" alt="icon" />
         <h1>Gusmares</h1>
       </div>
 
       <nav class="main-nav">
-        <a href="#">Sobre</a>
-        <a href="#">Projetos</a>
-        <a href="#">História</a>
+        <a href="#home">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#História">História</a>
+        <a href="#projetos">Projetos</a>
+       
       </nav>
 
       <nav class="gitbtn">
-        <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
-        <a href="https://linkedin.com/in/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">Meu LinkedIn</a>
-      </nav>
-
-      <div class="theme-switcher">
-        <button id="theme-toggle" aria-label="Alternar tema">
+        <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="GitHub">
+        </a>
+      
+        <button class="botao" id="theme-toggle" aria-label="Alternar tema">
           <span class="light-icon">☀️</span>
           <span class="dark-icon">🌙</span>
         </button>
-      </div>
+      </nav>
 
       <div class="status">
         <h3>Em Produção...</h3>
@@ -41,7 +43,7 @@
     </header>
 
     <main class="content">
-      <section class="inc">
+      <section class="inc" id="home">
         <article class="intro">
           <div class="animated-bg"></div>
           <div class="container">
@@ -52,7 +54,7 @@
         </article>
       </section>
 
-      <section class="Sobre">
+      <section class="Sobre" id="sobre">
         <article id="about" class="about-section">
           <div class="about-container">
             <h2 class="section-title">Sobre Mim</h2>
@@ -74,7 +76,7 @@
         </article>
       </section>
 
-      <article class="skills">
+      <article class="skills" id="skills">
         <h2>Habilidades</h2>
         <div class="cards-container">
           <div class="card"><img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML logo" /><h1>HTML</h1></div>
@@ -87,51 +89,49 @@
         </div>
       </article>
       
-      <div class="timeline">
-        <section class="historia-container">
-        <h2>Minha História</h2>
-        <p>
-            Em 2023 entrei no curso técnico de Análise e Desenvolvimento de Sistemas. De lá pra cá, foram anos de aprendizado contínuo e prática.
-        </p>
-        <p>
-            Sempre tive afinidade com lógica, sistemas operacionais e programação. Mas o que realmente me prendeu foi entender como tudo funciona por trás.
-        </p>
-        <p>
-            Hoje, meu foco está em segurança cibernética. Não por moda, mas por propósito.
-        </p>
-        </section>
-
-        <section class="historia-container">
-        <h2>2023</h2>
-        <p>
-            Início do curso técnico de ADS. Base sólida em lógica de programação, algoritmos, orientação a objetos e desenvolvimento web.
-        </p>
-        <p>
-            Nesse ano ainda era muito voltado pra desenvolvimento, mas já começava a olhar com mais atenção pra área de segurança.
-        </p>
-        </section>
-
-        <section class="historia-container">
-        <h2>2024</h2>
-        <p>
-            Aprofundamento em estrutura de dados, banco de dados, redes e sistemas operacionais. Comecei a usar Linux como sistema principal.
-        </p>
-        <p>
-            Estudo por conta própria de Bash, arquitetura de sistemas, engenharia reversa e conceitos de segurança ofensiva.
-        </p>
-        </section>
-
-        <section class="historia-container">
-        <h2>2025</h2>
-        <p>
-            Decisão definitiva: vou seguir o caminho da cibersegurança. Comecei a estudar hacking de forma séria, com foco em conhecimento real.
-        </p>
-        <p>
-            Aprendizado em ferramentas, metodologias, hardening e técnicas de intrusão. O objetivo é claro: dominar o sistema e proteger o que importa.
-        </p>
-        </section>
-      </div>
+      <div class="timeline" id="História">
+        <div class="line">
+          <section class="historia-container">
+            <h2>Minha História</h2>
+            <p>Em 2023 entrei no curso técnico de Análise e Desenvolvimento de Sistemas. De lá pra cá, foram anos de aprendizado contínuo e prática.</p>
+            <p>Sempre tive afinidade com lógica, sistemas operacionais e programação. Mas o que realmente me prendeu foi entender como tudo funciona por trás.</p>
+            <p>Hoje, meu foco está em segurança cibernética. Não por moda, mas por propósito.</p>
+            </section>
     
+            <section class="historia-container">
+            <h2>2023</h2>
+            <p>Início do curso técnico de ADS. Base sólida em lógica de programação, algoritmos, orientação a objetos e desenvolvimento web.</p>
+            <p>Nesse ano ainda era muito voltado pra desenvolvimento, mas já começava a olhar com mais atenção pra área de segurança.</p>
+            </section>
+    
+            <section class="historia-container">
+            <h2>2024</h2>
+            <p>Aprofundamento em estrutura de dados, banco de dados, redes e sistemas operacionais. Comecei a usar Linux como sistema principal.</p>
+            <p>Estudo por conta própria de Bash, arquitetura de sistemas, engenharia reversa e conceitos de segurança ofensiva.</p>
+            </section>
+    
+            <section class="historia-container">
+            <h2>2025</h2>
+            <p>Decisão definitiva: vou seguir o caminho da cibersegurança. Comecei a estudar hacking de forma séria, com foco em conhecimento real.</p>
+            <p>Aprendizado em ferramentas, metodologias, hardening e técnicas de intrusão. O objetivo é claro: dominar o sistema e proteger o que importa.</p>
+            </section>    
+        </div>
+      </div>
+
+      <section id="projetos" class="projects-section">
+        <div class="projects-container">
+          <h2>Projetos</h2>
+          <p class="projects-description">
+            Em breve, você poderá explorar alguns dos meus projetos mais recentes. Estou desenvolvendo soluções únicas com foco em <span class="highlight">segurança da informação</span>, <span class="highlight">automação</span> e <span class="highlight">eficiência digital</span>.
+          </p>
+          <div class="projects-working">
+            <img src="https://cdn-icons-png.flaticon.com/512/189/189792.png" alt="Em construção" width="32" height="32">
+            <span>Seção em desenvolvimento...</span>
+          </div>
+        </div>
+      </section>
+      
+      
     </main>
   </div>
 </body>
