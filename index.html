@@ -1,155 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Gusmares - Portfólio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap" rel="stylesheet">
   <script src="javaScript.js" defer></script>
-  <script src="https://kit.fontawesome.com/javaScript.js" crossorigin="anonymous"></script>
-
 </head>
-
 <body>
   <div class="page-container">
     <header class="sidebar">
       <div class="profile">
-        <img src="Fotos/icon.jpg" alt="icon" />
-        <h1>Gusmares</h1>
+        <img src="fotos/icon.jpg" alt="Profile Picture" onerror="this.src='https://via.placeholder.com/140?text=Profile'" />
+        <h1 id="name-animation">Gusmares</h1>
       </div>
-
-      <nav class="main-nav">
-        <a href="#home">Inicio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#História">História</a>
-        <a href="#projetos">Projetos</a>
-       
-      </nav>
-
-      <nav class="gitbtn">
-        <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="GitHub">
-        </a>
-      
-        <button class="botao" id="theme-toggle" aria-label="Alternar tema">
-          <span class="light-icon">☀️</span>
-          <span class="dark-icon">🌙</span>
-        </button>
-      </nav>
-
-      <div class="status">
+      <badge class="status">
         <h3>Em Produção...</h3>
+      </badge>
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="main-nav">
+        <a href="#home" class="nav-link">Início</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#skills" class="nav-link">Habilidades</a>
+        <a href="#historia" class="nav-link">História</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+      </nav>
+      <div class="gitbtn">
+        <a href="https://github.com/Gusmares" class="github-btn" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
     </header>
-
     <main class="content">
       <section class="inc" id="home">
         <article class="intro">
-          <div class="animated-bg"></div>
+          <canvas id="ascii-bg"></canvas>
           <div class="container">
-            <div class="inicio">
-              <h1>Olá! Meu nome é Gustavo e este é o meu portfólio.</h1>
+            <div class="inicio animate-on-scroll">
+              <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+            </div>
+            <div class="scroll-indicator">
+              <i class="fas fa-chevron-down"></i>
             </div>
           </div>
         </article>
       </section>
-
       <section class="Sobre" id="sobre">
         <article id="about" class="about-section">
-          <div class="about-container">
+          <div class="about-container animate-on-scroll">
             <h2 class="section-title">Sobre Mim</h2>
             <div class="about-content">
               <p class="about-text">
-                Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, com foco em <strong>desenvolvimento web</strong> e <strong>cibersegurança</strong>. Minha trajetória é movida pela curiosidade e pelo desejo constante de entender como as coisas funcionam.
+                Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por <strong>desenvolvimento web</strong>, <strong>design gráfico</strong> e <strong>cibersegurança</strong>. Tenho experiência em criar páginas web com <strong>HTML, CSS</strong> e <strong>JavaScript</strong>, além de projetos de design utilizando <strong>Adobe Photoshop, Illustrator</strong> e <strong>Premiere</strong>.
               </p>
               <p class="about-text">
-                Antes de ingressar no universo da programação, desenvolvi uma base sólida em <strong>design gráfico</strong>, atuando com ferramentas como <strong>Photoshop, Illustrator, After Effects, Premiere</strong> e <strong>CorelDRAW</strong>. Também utilizo <strong>Kdenlive</strong> como alternativa open-source.
+                Explorei <strong>C#</strong> desenvolvendo protótipos de jogos e, atualmente, estou aprendendo <strong>COBOL</strong> para sistemas legados. Minha abordagem combina criatividade e curiosidade técnica, sempre buscando aprender novas ferramentas e entregar projetos com qualidade.
               </p>
               <p class="about-text">
-                Tenho facilidade em solucionar problemas técnicos, tanto em <strong>software quanto hardware</strong>, e sou procurado quando algo precisa ser resolvido com agilidade e eficiência.
-              </p>
-              <p class="about-text">
-                Acredito que a verdadeira evolução vem da combinação entre <strong>criatividade, técnica e aprendizado contínuo</strong>. Essa é minha essência: <strong>"Aprender, implementar, evoluir."</strong>
+                Meu objetivo é crescer como desenvolvedor, contribuindo para soluções tecnológicas acessíveis e seguras, enquanto continuo a explorar áreas como segurança de sistemas e design de interfaces.
               </p>
             </div>
           </div>
         </article>
       </section>
-
       <article class="skills" id="skills">
-        <h2>Habilidades</h2>
-        <div class="cards-container">
-          <div class="card"><img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML logo" /><h1>HTML</h1></div>
-          <div class="card"><img src="https://cdn.simpleicons.org/css3/ffffff" alt="CSS logo" /><h1>CSS</h1></div>
-          <div class="card"><img src="https://cdn.simpleicons.org/gnubash/ffffff" alt="Bash logo" /><h1>Bash</h1></div>
-          <div class="card"><img src="https://cdn.simpleicons.org/linux/ffffff" alt="Linux logo" /><h1>Linux</h1></div>
-          <div class="card"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python logo" /><h1>Python</h1></div>
-          <div class="card"><img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript logo" /><h1>JavaScript</h1></div>
-          <div class="card"><img src="https://img.icons8.com/m_sharp/512/FFFFFF/java-coffee-cup-logo.png" alt="Java logo" /><h1>Java</h1></div>
+        <h2 class="section-title">Habilidades</h2>
+        <div class="cards-container animate-on-scroll">
+          <div class="card tilt-card">
+            <img src="https://cdn.simpleicons.org/html5/4A90E2" alt="HTML Logo" width="60" height="60" />
+            <h1>HTML</h1>
+          </div>
+          <div class="card tilt-card">
+            <img src="https://cdn.simpleicons.org/css3/4A90E2" alt="CSS Logo" width="60" height="60" />
+            <h1>CSS</h1>
+          </div>
+          <div class="card tilt-card">
+            <img src="https://cdn.simpleicons.org/gnubash/4A90E2" alt="Bash Logo" width="60" height="60" />
+            <h1>Bash</h1>
+          </div>
+          <div class="card tilt-card">
+            <img src="https://cdn.simpleicons.org/linux/4A90E2" alt="Linux Logo" width="60" height="60" />
+            <h1>Linux</h1>
+          </div>
+          <div class="card tilt-card">
+            <img src="https://cdn.simpleicons.org/python/4A90E2" alt="Python Logo" width="60" height="60" />
+            <h1>Python</h1>
+          </div>
+          <div class="card tilt-card">
+            <img src="https://cdn.simpleicons.org/csharp/4A90E2" alt="C# Logo" width="60" height="60" />
+            <h1>C#</h1>
+          </div>
+          <div class="card tilt-card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="#4A90E2">
+              <text x="50%" y="50%" font-family="Helvetica Neue, Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" dominant-baseline="middle">COBOL</text>
+            </svg>
+            <h1>COBOL</h1>
+          </div>
+          <div class="card tilt-card">
+            <img src="https://cdn.simpleicons.org/java/4A90E2" alt="Java Logo" width="60" height="60" />
+            <h1>Java</h1>
+          </div>
         </div>
       </article>
-      
-      <div class="timeline" id="História">
+      <div class="timeline" id="historia">
         <div class="line">
-          <section class="historia-container">
-            <h2>Minha História</h2>
-            <p>Sempre fui movido pela criatividade e pela busca por algo além do comum. Nunca me contentei com o básico — evoluir sempre foi a meta.</p>
-            </section>
-    
-            <section class="historia-container">
-            <h2>2023</h2>
-            <p>Entrei no curso técnico de ADS e comecei minha jornada nos estudos. Acabei me aproximando mais do design, o que me levou a fazer estágio e até atuar profissionalmente na área. Mesmo após sair do trabalho, a experiência foi valiosa e moldou minha visão de criação digital.</p>
-            </section>
-    
-            <section class="historia-container">
-            <h2>2024</h2>
-            <p>Voltei a focar mais em programação, mesmo ainda envolvido com design. Foi nesse momento que decidi me aprofundar em back-end. A ideia era clara: sair da superfície visual e mergulhar na estrutura dos sistemas.</p>
-            </section>
-    
-            <section class="historia-container">
-            <h2>2025</h2>
-            <p>Comecei o ano com foco total. Estou estudando cibersegurança e expandindo minhas habilidades com disciplina e propósito. A meta é simples: evoluir constantemente, sem nunca estagnar.</p>
-            </section>    
+          <section class="historia-container animate-on-scroll">
+            <h2 class="section-title">Minha Jornada</h2>
+            <p>Minha trajetória é marcada pela curiosidade e dedicação ao aprendizado, explorando tecnologia através de projetos práticos em desenvolvimento web, design e programação.</p>
+          </section>
+          <section class="historia-container animate-on-scroll">
+            <h2 class="section-title">2023</h2>
+            <p>Iniciei minha graduação em Análise e Desenvolvimento de Sistemas, aprendendo <strong>HTML, CSS</strong> e <strong>JavaScript</strong> para criar sites interativos. Também trabalhei em projetos de design gráfico com <strong>Adobe Creative Suite</strong>, desenvolvendo habilidades em design de interfaces.</p>
+          </section>
+          <section class="historia-container animate-on-scroll">
+            <h2 class="section-title">2024</h2>
+            <p>Experimentei <strong>C#</strong> criando protótipos de jogos, o que me ensinou lógica de programação. Comecei a explorar <strong>Linux</strong> e <strong>Bash</strong> para entender administração de sistemas e fundamentos de cibersegurança, como segurança de arquivos.</p>
+          </section>
+          <section class="historia-container animate-on-scroll">
+            <h2 class="section-title">2025</h2>
+            <p>Atualmente, estou aprendendo <strong>COBOL</strong> para trabalhar com sistemas legados e continuo desenvolvendo projetos web com <strong>HTML, CSS</strong> e <strong>JavaScript</strong>. Meu foco é aprimorar minhas habilidades e explorar cibersegurança para criar soluções seguras.</p>
+          </section>
         </div>
       </div>
-
       <section id="projetos" class="projects-section">
-        <div class="projects-container">
-          <h2>Projetos</h2>
-          <p class="projects-description">
-            Em breve, você poderá explorar alguns dos meus projetos mais recentes. Estou desenvolvendo soluções únicas com foco em <span class="highlight">segurança da informação</span>, <span class="highlight">automação</span> e <span class="highlight">eficiência digital</span>.
-          </p>
-          <div class="projects-working">
-            <img src="https://cdn-icons-png.flaticon.com/512/189/189792.png" alt="Em construção" width="32" height="32">
-            <span>Seção em desenvolvimento...</span>
+        <div class="projects-container animate-on-scroll">
+          <h2 class="section-title">Projetos</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h3>Portfólio Pessoal</h3>
+              <p>Criei um site responsivo usando <strong>HTML, CSS</strong> e <strong>JavaScript</strong>, com animações suaves e um layout limpo. O projeto mostra minhas habilidades em front-end e atenção aos detalhes no design.</p>
+              <div class="project-links">
+                <a href="https://github.com/Gusmares/Portfolio" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="demo-btn" onclick="showPopup()">Testar Projeto</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Blog Turma ADS</h3>
+              <p>Desenvolvi um blog com <strong>PHP, HTML e CSS</strong>, focando no uso de arquivos <code>.md</code> para criação de postagens. Foi um bom exercício de lógica e estrutura com PHP puro.</p>
+              <div class="project-links">
+                <a href="https://github.com/Gusmares/BlogAds" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="demo-btn" onclick="showPopup()">Testar Projeto</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Linux Defender</h3>
+              <p>Construí um script em <strong>Bash</strong> para varreduras simples de segurança no Linux. É um projeto em evolução, que pretendo expandir com linguagens mais robustas para segurança de sistemas.</p>
+              <div class="project-links">
+                <a href="https://github.com/Gusmares/Linux-Defender" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="demo-btn" onclick="showPopup()">Testar Projeto</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Projetos Com Python</h3>
+              <p>Reuni vários projetos em <strong>Python</strong>, feitos para treinar lógica, automações e interações com terminal. Serve como base prática do meu aprendizado na linguagem.</p>
+              <div class="project-links">
+                <a href="https://github.com/Gusmares/Projetos-Python" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="demo-btn" onclick="showPopup()">Testar Projeto</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Site Barbearia</h3>
+              <p>Site básico feito com <strong>HTML e CSS</strong>, desenvolvido como atividade de curso. Foi um dos meus primeiros contatos com front-end, onde aprendi estruturação e responsividade.</p>
+              <div class="project-links">
+                <a href="https://github.com/Gusmares/Trabalho-Barbearia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="demo-btn" onclick="showPopup()">Testar Projeto</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>DotBash</h3>
+              <p>Criei ferramentas simples em <strong>Bash</strong> voltadas à automação de tarefas e testes no terminal. Útil para ganhar prática com shell script e otimizar pequenos processos.</p>
+              <div class="project-links">
+                <a href="https://github.com/Gusmares/dotbash" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="demo-btn" onclick="showPopup()">Testar Projeto</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       
-      
-    </main>
+ <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <i class="fas fa-lock"></i>
+      <p>Aviso de Segurança: Esta função está em desenvolvimento.</p>
+    </div>
   </div>
 </body>
-
 <footer>
+  <div class="footer-bg"></div>
   <div class="container-footer">
     <div class="info">
-      <p><strong>Gusmares © 2025</strong></p>
-      <p>Código com propósito. Design com identidade.</p>
+      <h3>Gusmares © 2025</h3>
+      <p>Construindo o futuro com código e criatividade.</p>
     </div>
-
     <div class="links">
-      <a href="https://github.com/Gusmares" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="mailto:gustavocg2107@gmail.com"><i class="fas fa-envelope"></i> Contato</a>
+      <a href="https://github.com/Gusmares" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:gustavocg2107@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Contato</a>
+      <a href="https://linkedin.com/in/gusmares" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </div>
-
     <div class="frase">
-      <p>“O silêncio é o verdadeiro som da estratégia.”</p>
+      <p>“Crie com ousadia, evolua com estratégia.”</p>
     </div>
   </div>
 </footer>
-
-
 </html>
