@@ -8,27 +8,22 @@ mobileMenuToggle.addEventListener('click', (e) => {
   mainNav.classList.toggle('active');
   sidebar.classList.toggle('active');
   mobileMenuToggle.innerHTML = mainNav.classList.contains('active') 
-    ? '<i class="fas fa-times"></i>'
-    : '<i class="fas fa-bars"></i>';
+    ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
 });
 
-// Close mobile menu when a link is clicked and scroll to section
+// Close mobile menu on link click
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     mainNav.classList.remove('active');
     sidebar.classList.remove('active');
     mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-    
     const targetId = link.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
 
-// Close mobile menu when clicking outside
+// Close mobile menu on outside click
 document.addEventListener('click', (e) => {
   if (!sidebar.contains(e.target) && mainNav.classList.contains('active')) {
     mainNav.classList.remove('active');
@@ -38,20 +33,13 @@ document.addEventListener('click', (e) => {
 });
 
 // Scroll Animations
-document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.animate-on-scroll');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
-      } else {
-        entry.target.classList.remove('animate');
-      }
-    });
-  }, { threshold: 0.15 });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('animate', entry.isIntersecting);
+  });
+}, { threshold: 0.15 });
 
-  elements.forEach(el => observer.observe(el));
-});
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
 // Name Animation
 document.addEventListener('DOMContentLoaded', () => {
@@ -67,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     span.style.transition = `opacity 0.3s ease ${index * 0.1}s, letter-spacing 0.3s ease ${index * 0.1}s`;
     nameElement.appendChild(span);
   });
-
   setTimeout(() => {
     nameElement.querySelectorAll('span').forEach(span => {
       span.style.opacity = '1';
@@ -76,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 500);
 });
 
-// Decrypting Typing Animation
+// Typing Animation
 const typedText = document.getElementById('typed-text');
 const textToType = "Oi, eu sou Gustavo! Bem-vindo ao meu universo digital.";
 let index = 0;
@@ -89,45 +76,32 @@ function type() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(type, 500);
-});
+document.addEventListener('DOMContentLoaded', () => setTimeout(type, 500));
 
-// ASCII Art Background
+// ASCII Background
 const canvas = document.getElementById('ascii-bg');
 const ctx = canvas.getContext('2d');
+const chars = ['0', '1', '{', '}', '[', ']', '<', '>', '#', '@'];
+const fontSize = 12;
+let drops = [];
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  drops.length = Math.floor(canvas.width / fontSize);
-  drops.fill(0);
+  drops = Array(Math.floor(canvas.width / fontSize)).fill(0);
 }
 
 resizeCanvas();
 
-const chars = ['0', '1', '{', '}', '[', ']', '<', '>', '#', '@'];
-const fontSize = 12;
-const columns = Math.floor(canvas.width / fontSize);
-const drops = Array(columns).fill(0);
-
 function drawAscii() {
   ctx.fillStyle = 'rgba(28, 37, 38, 0.05)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  
   ctx.fillStyle = 'rgba(74, 144, 226, 0.3)';
   ctx.font = `${fontSize}px monospace`;
-  
   drops.forEach((y, i) => {
     const char = chars[Math.floor(Math.random() * chars.length)];
-    const x = i * fontSize;
-    ctx.fillText(char, x, y * fontSize);
-    
-    if (y * fontSize > canvas.height && Math.random() > 0.975) {
-      drops[i] = 0;
-    } else {
-      drops[i]++;
-    }
+    ctx.fillText(char, i * fontSize, y * fontSize);
+    drops[i] = (y * fontSize > canvas.height && Math.random() > 0.975) ? 0 : y + 1;
   });
 }
 
@@ -137,10 +111,9 @@ function animateAscii() {
 }
 
 animateAscii();
-
 window.addEventListener('resize', resizeCanvas);
 
-// 3D Tilt Effect for Skill Cards
+// 3D Tilt Effect
 document.querySelectorAll('.tilt-card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
@@ -150,36 +123,31 @@ document.querySelectorAll('.tilt-card').forEach(card => {
     const centerY = rect.height / 2;
     const rotateX = (y - centerY) / 10;
     const rotateY = (centerX - x) / 10;
-
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
-
   card.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
   });
 });
 
-// Popup Functionality
+// Popup
 function showPopup() {
-  const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollY = window.pageYOffset;
   document.body.style.position = 'fixed';
   document.body.style.top = `-${scrollY}px`;
   document.body.style.width = '100%';
-  const popup = document.getElementById('popup');
-  popup.style.display = 'flex';
+  document.getElementById('popup').style.display = 'flex';
 }
 
 function closePopup() {
-  const popup = document.getElementById('popup');
   const scrollY = parseInt(document.body.style.top || '0', 10);
   document.body.style.position = '';
   document.body.style.top = '';
   document.body.style.width = '';
   window.scrollTo(0, -scrollY);
-  popup.style.display = 'none';
+  document.getElementById('popup').style.display = 'none';
 }
 
-// Close popup when clicking outside
 document.addEventListener('click', (e) => {
   const popup = document.getElementById('popup');
   const popupContent = document.querySelector('.popup-content');
