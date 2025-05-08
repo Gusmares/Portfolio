@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gusmares - Portfólio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap" rel="stylesheet">
   <script src="javaScript.js" defer></script>
 </head>
@@ -13,12 +13,12 @@
   <div class="page-container">
     <header class="sidebar">
       <div class="profile">
-        <img src="fotos/icon.jpg" alt="Profile Picture" onerror="this.src='https://via.placeholder.com/140?text=Profile'" />
+        <img src="fotos/icon.jpg" alt="Profile Picture" onerror="this.src='https://via.placeholder.com/140?text=Profile'">
         <h1 id="name-animation">Gusmares</h1>
       </div>
-      <badge class="status">
+      <div class="status">
         <h3>Em Produção...</h3>
-      </badge>
+      </div>
       <button class="mobile-menu-toggle">
         <i class="fas fa-bars"></i>
       </button>
@@ -36,96 +36,80 @@
       </div>
     </header>
     <main class="content">
-      <section class="inc" id="home">
-        <article class="intro">
-          <canvas id="ascii-bg"></canvas>
-          <div class="container">
-            <div class="inicio animate-on-scroll">
-              <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
-            </div>
-            <div class="scroll-indicator">
-              <i class="fas fa-chevron-down"></i>
-            </div>
-          </div>
-        </article>
+      <section id="home" class="intro">
+        <canvas id="ascii-bg"></canvas>
+        <div class="inicio animate-on-scroll">
+          <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+        </div>
+        <div class="scroll-indicator">
+          <i class="fas fa-chevron-down"></i>
+        </div>
       </section>
-      <section class="Sobre" id="sobre">
-        <article id="about" class="about-section">
-          <div class="about-container animate-on-scroll">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-              <p class="about-text">
-                Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por <strong>desenvolvimento web</strong>, <strong>design gráfico</strong> e <strong>cibersegurança</strong>. Tenho experiência em criar páginas web com <strong>HTML, CSS</strong> e <strong>JavaScript</strong>, além de projetos de design utilizando <strong>Adobe Photoshop, Illustrator</strong> e <strong>Premiere</strong>.
-              </p>
-              <p class="about-text">
-                Explorei <strong>C#</strong> desenvolvendo protótipos de jogos e, atualmente, estou aprendendo <strong>COBOL</strong> para sistemas legados. Minha abordagem combina criatividade e curiosidade técnica, sempre buscando aprender novas ferramentas e entregar projetos com qualidade.
-              </p>
-              <p class="about-text">
-                Meu objetivo é crescer como desenvolvedor, contribuindo para soluções tecnológicas acessíveis e seguras, enquanto continuo a explorar áreas como segurança de sistemas e design de interfaces.
-              </p>
-            </div>
-          </div>
-        </article>
+      <section id="sobre" class="about-container animate-on-scroll">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-content">
+          <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por <strong>desenvolvimento web</strong>, <strong>design gráfico</strong> e <strong>cibersegurança</strong>. Tenho experiência em criar páginas web com <strong>HTML, CSS</strong> e <strong>JavaScript</strong>, além de projetos de design utilizando <strong>Adobe Photoshop, Illustrator</strong> e <strong>Premiere</strong>.</p>
+          <p>Explorei <strong>C#</strong> desenvolvendo protótipos de jogos e, atualmente, estou aprendendo <strong>COBOL</strong> para sistemas legados. Minha abordagem combina criatividade e curiosidade técnica, sempre buscando aprender novas ferramentas e entregar projetos com qualidade.</p>
+          <p>Meu objetivo é crescer como desenvolvedor, contribuindo para soluções tecnológicas acessíveis e seguras, enquanto continuo a explorar áreas como segurança de sistemas e design de interfaces.</p>
+        </div>
       </section>
-      <article class="skills" id="skills">
+      <section id="skills" class="skills">
         <h2 class="section-title">Habilidades</h2>
         <div class="cards-container animate-on-scroll">
           <div class="card tilt-card">
-            <img src="https://cdn.simpleicons.org/html5/4A90E2" alt="HTML Logo" width="60" height="60" />
+            <img src="https://cdn.simpleicons.org/html5/4A90E2" alt="HTML Logo" width="60" height="60">
             <h1>HTML</h1>
           </div>
           <div class="card tilt-card">
-            <img src="https://cdn.simpleicons.org/css3/4A90E2" alt="CSS Logo" width="60" height="60" />
+            <img src="https://cdn.simpleicons.org/css3/4A90E2" alt="CSS Logo" width="60" height="60">
             <h1>CSS</h1>
           </div>
           <div class="card tilt-card">
-            <img src="https://cdn.simpleicons.org/gnubash/4A90E2" alt="Bash Logo" width="60" height="60" />
+            <img src="https://cdn.simpleicons.org/gnubash/4A90E2" alt="Bash Logo" width="60" height="60">
             <h1>Bash</h1>
           </div>
           <div class="card tilt-card">
-            <img src="https://cdn.simpleicons.org/linux/4A90E2" alt="Linux Logo" width="60" height="60" />
+            <img src="https://cdn.simpleicons.org/linux/4A90E2" alt="Linux Logo" width="60" height="60">
             <h1>Linux</h1>
           </div>
           <div class="card tilt-card">
-            <img src="https://cdn.simpleicons.org/python/4A90E2" alt="Python Logo" width="60" height="60" />
+            <img src="https://cdn.simpleicons.org/python/4A90E2" alt="Python Logo" width="60" height="60">
             <h1>Python</h1>
           </div>
           <div class="card tilt-card">
-            <img src="https://cdn.simpleicons.org/csharp/4A90E2" alt="C# Logo" width="60" height="60" />
+            <img src="https://static.cdnlogo.com/logos/c/27/c.svg" alt="C# Logo" width="60" height="60">
             <h1>C#</h1>
           </div>
           <div class="card tilt-card">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="#4A90E2">
-              <text x="50%" y="50%" font-family="Helvetica Neue, Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" dominant-baseline="middle">COBOL</text>
-            </svg>
+            <img src="https://www.svgrepo.com/show/373510/cobol.svg" alt="COBOL Logo" width="60" height="60">
             <h1>COBOL</h1>
           </div>
           <div class="card tilt-card">
-            <img src="https://cdn.simpleicons.org/java/4A90E2" alt="Java Logo" width="60" height="60" />
+            <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java Logo" width="60" height="60">
             <h1>Java</h1>
           </div>
         </div>
-      </article>
-      <div class="timeline" id="historia">
+      </section>
+      <section id="historia" class="timeline">
         <div class="line">
-          <section class="historia-container animate-on-scroll">
+          <div class="historia-container animate-on-scroll">
             <h2 class="section-title">Minha Jornada</h2>
             <p>Minha trajetória é marcada pela curiosidade e dedicação ao aprendizado, explorando tecnologia através de projetos práticos em desenvolvimento web, design e programação.</p>
-          </section>
-          <section class="historia-container animate-on-scroll">
+          </div>
+          <div class="historia-container animate-on-scroll">
             <h2 class="section-title">2023</h2>
             <p>Iniciei minha graduação em Análise e Desenvolvimento de Sistemas, aprendendo <strong>HTML, CSS</strong> e <strong>JavaScript</strong> para criar sites interativos. Também trabalhei em projetos de design gráfico com <strong>Adobe Creative Suite</strong>, desenvolvendo habilidades em design de interfaces.</p>
-          </section>
-          <section class="historia-container animate-on-scroll">
+          </div>
+          <div class="historia-container animate-on-scroll">
             <h2 class="section-title">2024</h2>
             <p>Experimentei <strong>C#</strong> criando protótipos de jogos, o que me ensinou lógica de programação. Comecei a explorar <strong>Linux</strong> e <strong>Bash</strong> para entender administração de sistemas e fundamentos de cibersegurança, como segurança de arquivos.</p>
-          </section>
-          <section class="historia-container animate-on-scroll">
+          </div>
+          <div class="historia-container animate-on-scroll">
             <h2 class="section-title">2025</h2>
             <p>Atualmente, estou aprendendo <strong>COBOL</strong> para trabalhar com sistemas legados e continuo desenvolvendo projetos web com <strong>HTML, CSS</strong> e <strong>JavaScript</strong>. Meu foco é aprimorar minhas habilidades e explorar cibersegurança para criar soluções seguras.</p>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
       <section id="projetos" class="projects-section">
         <div class="projects-container animate-on-scroll">
           <h2 class="section-title">Projetos</h2>
@@ -181,30 +165,31 @@
           </div>
         </div>
       </section>
-      
- <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">×</span>
-      <i class="fas fa-lock"></i>
-      <p>Aviso de Segurança: Esta função está em desenvolvimento.</p>
-    </div>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">×</span>
+          <i class="fas fa-lock"></i>
+          <p>Aviso de Segurança: Esta função está em desenvolvimento.</p>
+        </div>
+      </div>
+    </main>
   </div>
+  <footer>
+    <div class="footer-bg"></div>
+    <div class="container-footer">
+      <div class="info">
+        <h3>Gusmares © 2025</h3>
+        <p>Construindo o futuro com código e criatividade.</p>
+      </div>
+      <div class="links">
+        <a href="https://github.com/Gusmares" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:gustavocg2107@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Contato</a>
+        <a href="https://linkedin.com/in/gusmares" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <div class="frase">
+        <p>“Crie com ousadia, evolua com estratégia.”</p>
+      </div>
+    </div>
+  </footer>
 </body>
-<footer>
-  <div class="footer-bg"></div>
-  <div class="container-footer">
-    <div class="info">
-      <h3>Gusmares © 2025</h3>
-      <p>Construindo o futuro com código e criatividade.</p>
-    </div>
-    <div class="links">
-      <a href="https://github.com/Gusmares" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
-      <a href="mailto:gustavocg2107@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Contato</a>
-      <a href="https://linkedin.com/in/gusmares" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    </div>
-    <div class="frase">
-      <p>“Crie com ousadia, evolua com estratégia.”</p>
-    </div>
-  </div>
-</footer>
 </html>
