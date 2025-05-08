@@ -374,6 +374,7 @@ body::before {
   height: auto;
   margin-bottom: 12px;
   transition: transform 0.3s ease;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(190deg) brightness(90%) contrast(90%);
 }
 
 .card:hover img, .card:hover svg {
