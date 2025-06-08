@@ -45,7 +45,7 @@ Paleta inspirada em temas de hacking, tecnologia e elegância. Compatível com *
 ---
 
 ## 📁 Organização de Pastas
-´´´
+```
 .
 ├── fotos
 │   └── icon.jpg
@@ -53,7 +53,7 @@ Paleta inspirada em temas de hacking, tecnologia e elegância. Compatível com *
 ├── javaScript.js
 ├── README.md
 └── style.css
-´´´
+```
 ---
 
 ## 🧩 Funcionalidades
