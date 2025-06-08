@@ -45,9 +45,15 @@ Paleta inspirada em temas de hacking, tecnologia e elegância. Compatível com *
 ---
 
 ## 📁 Organização de Pastas
-
-gusmares/ ├── index.html ├── css/ │ └── style.css ├── js/ │ └── main.js ├── assets/ │ ├── img/ │ └── icons/ ├── README.md └── LICENSE
-
+´´´
+.
+├── fotos
+│   └── icon.jpg
+├── index.html
+├── javaScript.js
+├── README.md
+└── style.css
+´´´
 ---
 
 ## 🧩 Funcionalidades
