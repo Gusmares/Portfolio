@@ -26,7 +26,6 @@
 
 Paleta inspirada em temas de hacking, tecnologia e elegância. Compatível com **modo escuro** e **modo claro**.
 
-### 🌙 Modo Escuro
 
 | Nome             | Hex       | Uso sugerido            |
 |------------------|-----------|--------------------------|
