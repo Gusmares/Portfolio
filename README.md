@@ -69,6 +69,6 @@ Paleta inspirada em temas de hacking, tecnologia e elegância. Compatível com *
 ## 📦 Como Executar Localmente
 
 ```bash
-git clone https://github.com/seu-usuario/gusmares.git
-cd gusmares
+git clone https://github.com/Gusmares/Portfolio.git
+cd Portfolio
 # Abrir index.html no navegador
